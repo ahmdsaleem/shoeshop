@@ -14,7 +14,7 @@ public class Main {
         newShoe2.setId("BATA 3");
         shoeAction.addShoe(newShoe);
         shoeAction.addShoe(newShoe1);
-//  //      shoeAction.listShoes();
+        shoeAction.listShoes();
 //
 //
 //      //  if(shoeAction.viewShoe("BATA 1")!=null){
