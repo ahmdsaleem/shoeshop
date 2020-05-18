@@ -13,6 +13,7 @@ public class Main {
             int choice;
             Menu menu = new Menu();
             ShoeView shoeView = new ShoeView();
+            BrandView brandView = new BrandView();
 
             //Seed Data Start
             ShoeAction shoeAction = new ShoeAction();
@@ -24,6 +25,7 @@ public class Main {
             choice = scanner.nextInt();
             scanner.nextLine();
             shoeView.showShoeMenu(choice);
+            brandView.showBrandMenu(choice);
             System.out.println("Enter \"End\" to end the Program");
             end = scanner.nextLine();
 
