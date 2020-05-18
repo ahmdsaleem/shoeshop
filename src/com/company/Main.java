@@ -1,33 +1,36 @@
 package com.company;
 
+import com.company.beans.Shelf;
 import com.company.beans.Shoe;
+
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-       ShoeAction shoeAction= new ShoeAction();
-        Shoe newShoe= new Shoe();
-        newShoe.setId("BATA 1");
-        Shoe newShoe1 = new Shoe();
-        newShoe1.setId("BATA 2");
-        Shoe newShoe2 = new Shoe();
-        newShoe2.setId("BATA 3");
-        shoeAction.addShoe(newShoe);
-        shoeAction.addShoe(newShoe1);
-        shoeAction.listShoes();
-//
-//
-//      //  if(shoeAction.viewShoe("BATA 1")!=null){
-//          //  System.out.println(shoeAction.viewShoe("BATA 1").getId());
-//        //}
-//
-//        shoeAction.updateShoe("BATA 2",newShoe2);
+        String end="Start";
+        do{
+            int choice;
+            Menu menu = new Menu();
+            ShoeView shoeView = new ShoeView();
 
-        shoeAction.deleteShoe("BATA 1");
+            //Seed Data Start
+            ShoeAction shoeAction = new ShoeAction();
 
+            //Seed Data End
 
-        shoeAction.listShoes();
+            menu.showMenu();
+            Scanner scanner = new Scanner(System.in);
+            choice = scanner.nextInt();
+            scanner.nextLine();
+            shoeView.showShoeMenu(choice);
+            System.out.println("Enter \"End\" to end the Program");
+            end = scanner.nextLine();
+
+        }while(!(end.equalsIgnoreCase("End")));
+
 
 
     }
+
 }
