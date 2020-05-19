@@ -26,15 +26,6 @@ public class BrandView {
             BrandChoice = scanner.nextInt();
             scanner.nextLine();
 
-            Brand newBrand1= new Brand();
-            newBrand1.setId("Brand 1");
-            Brand newBrand2 = new Brand();
-            newBrand2.setId("Brand 2");
-            Brand newBrand3 = new Brand();
-            newBrand3.setId("Brand 3");
-            brandAction.addBrand(newBrand1);
-            brandAction.addBrand(newBrand2);
-            brandAction.addBrand(newBrand3);
 
             if(BrandChoice==1){
 
@@ -51,7 +42,9 @@ public class BrandView {
             else if(BrandChoice==2){
                 System.out.println("Enter the Id of the Brand you want to search");
                 BrandId = scanner.nextLine();
-                System.out.println(brandAction.viewBrand(BrandId).getId()+" is Present");
+                if(brandAction.viewBrand(BrandId) != null) {
+                    System.out.println(brandAction.viewBrand(BrandId).getId() + " is Present");
+                }
                 System.out.println("Brand is Searched Successfully");
             }
 
@@ -70,7 +63,7 @@ public class BrandView {
             }
 
             else if(BrandChoice == 4){
-                System.out.println("Enter the Id of the Shoe you want to Delete");
+                System.out.println("Enter the Id of the Brand you want to Delete");
                 BrandId = scanner.nextLine();
                 brandAction.deleteBrand(BrandId);
                 System.out.println("Brand is Deleted Successfully");

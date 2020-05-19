@@ -30,7 +30,7 @@ public class OrderAction {
         }
     }
 
-    public void deleteBrand(String id){
+    public void deleteOrder(String id){
         for(int i=0;i<orderIndex;i++){
             if(orders[i].getId().equalsIgnoreCase(id)){
                 orders[i]=null;
@@ -40,7 +40,7 @@ public class OrderAction {
 
 
 
-    public void listBrands(){
+    public void listOrders(){
         for(int i=0;i<orderIndex;i++){
             if(orders[i]!=null) {
                 System.out.println(orders[i].getId());

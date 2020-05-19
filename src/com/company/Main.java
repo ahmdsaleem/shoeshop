@@ -1,8 +1,5 @@
 package com.company;
 
-import com.company.beans.Shelf;
-import com.company.beans.Shoe;
-
 import java.util.Scanner;
 
 public class Main {
@@ -12,13 +9,13 @@ public class Main {
         do{
             int choice;
             Menu menu = new Menu();
-            ShoeView shoeView = new ShoeView();
             BrandView brandView = new BrandView();
+            CustomerView customerView = new CustomerView();
+            EmployeeView employeeView = new EmployeeView();
+            OrderView orderView = new OrderView();
+            ShelfView shelfView = new ShelfView();
+            ShoeView shoeView = new ShoeView();
 
-            //Seed Data Start
-            ShoeAction shoeAction = new ShoeAction();
-
-            //Seed Data End
 
             menu.showMenu();
             Scanner scanner = new Scanner(System.in);
@@ -26,6 +23,12 @@ public class Main {
             scanner.nextLine();
             shoeView.showShoeMenu(choice);
             brandView.showBrandMenu(choice);
+            customerView.showCustomerMenu(choice);
+            employeeView.showEmployeeMenu(choice);
+            orderView.showOrderMenu(choice);
+            shelfView.showShelfMenu(choice);
+
+
             System.out.println("Enter \"End\" to end the Program");
             end = scanner.nextLine();
 

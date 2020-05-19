@@ -15,15 +15,6 @@ public class ShoeView {
         Shoe addedShoe = new Shoe();
         Shoe updatedShoe = new Shoe();
 
-        Shoe newShoe1= new Shoe();
-        newShoe1.setId("Shoe 1");
-        Shoe newShoe2 = new Shoe();
-        newShoe2.setId("Shoe 2");
-        Shoe newShoe3 = new Shoe();
-        newShoe3.setId("Shoe 3");
-        shoeAction.addShoe(newShoe1);
-        shoeAction.addShoe(newShoe2);
-        shoeAction.addShoe(newShoe3);
 
         if(choice==6){
             System.out.println("Press 1 to Add Shoe");
@@ -50,7 +41,9 @@ public class ShoeView {
             else if(ShoeChoice==2){
                 System.out.println("Enter the Id of the Shoe you want to search");
                 ShoeId = scanner.nextLine();
-                System.out.println(shoeAction.viewShoe(ShoeId).getId()+" is Present");
+                if(shoeAction.viewShoe(ShoeId) != null) {
+                    System.out.println(shoeAction.viewShoe(ShoeId).getId() + " is Present");
+                }
                 System.out.println("Shoe is Searched Successfully");
             }
 
