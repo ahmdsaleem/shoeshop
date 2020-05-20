@@ -1,6 +1,6 @@
 package com.company.beans;
 
-public class Brand{
+public class Person {
     private String id;
     private String name;
 

@@ -1,11 +1,29 @@
 package com.company.beans;
 
-public class Shoe extends Brand{
+public class Shoe{
+    private String id;
+    private String name;
     private String brandId;
     private String shoeTypeId;
     private String color;
     private String shelfID;
     private String price;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public String getBrandId() {
         return brandId;
