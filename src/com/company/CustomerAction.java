@@ -1,12 +1,13 @@
 package com.company;
 
 import com.company.beans.Customer;
+import com.company.beans.Person;
 
 
 public class CustomerAction {
 
     private int customerIndex=0;
-    private Customer customers[] = new Customer[500];
+    private Person customers[] = new Customer[500];
 
     public void addCustomer(Customer customer){
         customers[customerIndex]=customer;
@@ -14,7 +15,7 @@ public class CustomerAction {
 
     }
 
-    public Customer viewCustomer(String id){
+    public Person viewCustomer(String id){
         for(int i=0;i<customerIndex;i++){
             if(customers[i].getId().equalsIgnoreCase(id)){
                 return customers[i];

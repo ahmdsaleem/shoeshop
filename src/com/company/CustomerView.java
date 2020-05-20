@@ -2,7 +2,6 @@ package com.company;
 
 import com.company.beans.Customer;
 
-
 import java.util.Scanner;
 
 public class CustomerView {
